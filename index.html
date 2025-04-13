@@ -200,11 +200,11 @@
 }
 
 .hero-text p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-style: italic;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   line-height: 1.8;
-  max-width: 600px;
+  max-width: 50%;
   background: rgba(0, 0, 0, 0.4);
   margin: auto;
   padding: 0 1rem;
@@ -229,22 +229,34 @@
     font-size: 0.9rem;
     line-height: 1.3;
     padding: 0.5rem 0.8rem;
-    max-width: 90%;
+    max-width: 100%;
     margin: auto;
-
   }
 
   .hero {
     height: 80vh;
+    padding: 0.5rem 0.5rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
   }
   .hero-content {
-    padding: 2rem 1rem;
+    max-width: 100%;
+    padding: 1rem 1rem;
+  }
+  .hero-text {
+    max-width: 100% !important;
+    padding: 0.5rem 0.5rem;
   }
 
   .hero-text h2 {
     font-size: 1.8rem;
   }
   .hero-text p {
+    width: 100%;
+    max-width: 100%;
     font-size: 0.9rem;
   }
 }
