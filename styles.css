@@ -1,0 +1,129 @@
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  .header, .footer {
+    background: #2c3e50; /* Dark mining-inspired blue */
+    color: #ecf0f1; /* Light text for contrast */
+    padding: 1rem 0;
+  }
+  .header .logo, .footer p {
+    text-align: center;
+    font-weight: 600;
+  }
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+  .nav-links li {
+    margin: 0 1rem;
+  }
+  .nav-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  .nav-links a:hover {
+    color: #f39c12; /* Gold accent */
+  }
+  .hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 4rem 1rem;
+    background-blend-mode: overlay;
+    background-color: rgba(44, 62, 80, 0.7); /* Overlay for better text readability */
+  }
+  .section {
+    padding: 2rem 1rem;
+  }
+  .dark-bg {
+    background: #ecf0f1; /* Light background for contrast */
+  }
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  .card {
+    background: #fff;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  .card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 2px solid #f39c12; /* Gold border */
+  }
+  .btn {
+    display: inline-block;
+    background: #f39c12; /* Gold button */
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  .btn:hover {
+    background: #d35400; /* Darker gold for hover */
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .section h3, .section p {
+    animation: fadeIn 1s ease-in-out;
+  }
+  .section h3 {
+    color: #2c3e50; /* Dark mining-inspired blue */
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .section p {
+    color: #555;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+  ul li {
+    margin: 0.5rem 0;
+  }
+  ul li a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  ul li a:hover {
+    color: #f39c12; /* Gold accent */
+  }
+  footer p {
+    font-size: 0.9rem;
+  }
+</style>

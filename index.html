@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ASSOCIATION OF MINING AND MINERAL PROCESSING ENGINEERING STUDENTS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+   
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+  <header class="header" style="position: fixed; top: 0; width: 100%; z-index: 1000;">
+    <div class="container header-flex">
+      <h1 class="logo">AMMPES</h1>
+      <nav>
+        <button id="menu-toggle" class="menu-button">☰</button>
+        <ul class="nav-links" id="nav-menu">
+          <button class="close-btn" id="close-menu">✕</button>
+          <li><a href="#about">About</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#join">Join Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- Overlay for mobile -->
+  <div class="overlay" id="overlay"></div>
+  
+  <section class="hero">
+    <div class="container hero-content">
+        <div class="hero-text">
+          <h2>Welcome to AMMPES JKUAT</h2>
+            <p>"Mining is not just about extracting resources; it's about building a legacy of innovation, sustainability, and community. The equipment in this image represents the heart of the industry — the machines that power our progress. It’s a reminder of the work done by skilled professionals to extract the precious minerals that fuel global development. Our association, the AMMPES, plays a crucial role in ensuring that mining is not only safe and sustainable but also a source of pride and opportunity for future generations. By advancing education, fostering industry collaboration, and advocating for responsible practices, we aim to enhance the mining profession. Remember, if it cannot be grown, then it has to be mined." – Dr. Juliah Wangari, Patron AMMPES</p>
+        </div>
+    </div>
+</section>
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  const closeMenu = document.getElementById('close-menu');
+  const overlay = document.getElementById('overlay');
+
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.add('active');
+    overlay.classList.add('active');
+  });
+
+  closeMenu.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+    overlay.classList.remove('active');
+  });
+
+  overlay.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+    overlay.classList.remove('active');
+  });
+</script>
+
+
+<style>
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #d4af37;
+  z-index: 1003;
+}
+.close-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #d4af37;
+  z-index: 1003;
+}
+
+.nav-links {
+  position: relative;
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+}
+
+.nav-links a {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Mobile Sidebar Styles */
+@media (max-width: 768px) {
+  .menu-button {
+    display: block;
+  }
+  .close-btn {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #3e3e3e;
+    padding-top: 4rem;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1008;
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+
+  .nav-links a {
+    padding: 1rem;
+    display: block;
+    border-bottom: 1px solid #555;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 4;
+  }
+
+  .overlay.active {
+    display: block;
+  }
+}
+
+.hero {
+  margin-top: 76px;
+  background: linear-gradient(to right, #2d2d2d, #4d4d4d);
+  background-image: url('closeup-shot-ongoing-construction-with-tracks-bulldozer-abandoned-land (1).jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  padding: 4rem 1rem;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-weight: 20;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+.hero-content:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+}
+.hero-text h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-text p {
+  font-size: 1rem;
+  font-style: italic;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  line-height: 1.8;
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.4);
+  margin: auto;
+  padding: 0 1rem;
+  text-align: justify;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  border: 2px solid #d4af37;
+  transition: all 0.3s ease;
+}
+
+.hero-text p:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 768px) {
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+  .hero-text p {
+    font-size: 0.9rem;
+    line-height: 1.3;
+    padding: 0.5rem 0.8rem;
+    max-width: 90%;
+    margin: auto;
+
+  }
+
+  .hero {
+    height: 80vh;
+  }
+  .hero-content {
+    padding: 2rem 1rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.8rem;
+  }
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+}
+
+</style>
+
+<section id="about" class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- About Us -->
+    <div class="text-center mb-12">
+      <h3 class="text-3xl md:text-4xl font-bold text-gray-900">About Us</h3>
+      <p class="mt-4 text-gray-600 text-left text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
+        The <strong>Association of Mining and Mineral Processing Engineering Students (AMMPES)</strong> is a dynamic student-led body committed to fostering academic excellence, professional growth, and innovation in the fields of mining and mineral processing. We serve as a platform for collaboration, leadership development, industry engagement, and advocacy for sustainable engineering practices. Through technical forums, mentorship, industrial exposure, and community initiatives, AMMPES empowers the next generation of mining engineers to lead with purpose and impact.
+      </p>
+    </div>
+    
+
+    <!-- Mission & Vision -->
+    <div class="grid gap-8 md:grid-cols-2">
+      <div class="rounded-xl p-6 bg-gray-50 shadow-md hover:shadow-xl transition">
+        <h4 class="text-xl font-semibold text-yellow-500 mb-3 text-center">Our Mission</h4>
+        <p class="text-gray-700 text-justify leading-relaxed">
+          To create a vibrant and inclusive environment for students to explore innovation, sustainability, and professionalism in mining and mineral processing through academic and industrial engagement.
+        </p>
+      </div>
+      <div class="rounded-xl p-6 bg-gray-50 shadow-md hover:shadow-xl transition">
+        <h4 class="text-xl font-semibold text-yellow-500 mb-3 text-center">Our Vision</h4>
+        <p class="text-gray-700 text-justify leading-relaxed">
+          To be a leading student body that nurtures skilled, ethical, and future-ready engineers transforming the mining industry sustainably.
+        </p>
+      </div>
+    </div>
+
+    <!-- Core Values -->
+    <div class="mt-16">
+      <h4 class="text-2xl font-bold text-center text-gray-900 mb-10">Our Core Values</h4>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white p-5 rounded-xl border hover:shadow-lg transition">
+          <h5 class="text-yellow-500 font-semibold mb-2">Integrity</h5>
+          <p class="text-gray-600 text-sm leading-relaxed">We uphold honesty and strong moral principles in all our engagements.</p>
+        </div>
+        <div class="bg-white p-5 rounded-xl border hover:shadow-lg transition">
+          <h5 class="text-yellow-500 font-semibold mb-2">Innovation</h5>
+          <p class="text-gray-600 text-sm leading-relaxed">We nurture creative thinking to solve challenges in mining and technology.</p>
+        </div>
+        <div class="bg-white p-5 rounded-xl border hover:shadow-lg transition">
+          <h5 class="text-yellow-500 font-semibold mb-2">Excellence</h5>
+          <p class="text-gray-600 text-sm leading-relaxed">We pursue high standards in academics, events, and leadership.</p>
+        </div>
+        <div class="bg-white p-5 rounded-xl border hover:shadow-lg transition">
+          <h5 class="text-yellow-500 font-semibold mb-2">Sustainability</h5>
+          <p class="text-gray-600 text-sm leading-relaxed">We promote responsible mining that safeguards the planet’s future.</p>
+        </div>
+        <div class="bg-white p-5 rounded-xl border hover:shadow-lg transition">
+          <h5 class="text-yellow-500 font-semibold mb-2">Collaboration</h5>
+          <p class="text-gray-600 text-sm leading-relaxed">We encourage teamwork and unity within and beyond our community.</p>
+        </div>
+        <div class="bg-white p-5 rounded-xl border hover:shadow-lg transition">
+          <h5 class="text-yellow-500 font-semibold mb-2">Leadership</h5>
+          <p class="text-gray-600 text-sm leading-relaxed">We empower students to become confident and ethical leaders.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- What We Do -->
+    <div class="mt-20">
+      <h4 class="text-2xl font-bold text-center text-gray-900 mb-10">What We Do</h4>
+      <div class="grid gap-8 md:grid-cols-2">
+        <div class="bg-gray-50 rounded-xl p-6 shadow hover:shadow-xl transition">
+          <h5 class="text-yellow-500 font-semibold mb-2 text-lg">Academic Support</h5>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            We run mentorships, academic clinics, and knowledge-sharing forums to empower academic success.
+          </p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-6 shadow hover:shadow-xl transition">
+          <h5 class="text-yellow-500 font-semibold mb-2 text-lg">Industrial Exposure</h5>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            Through field visits, industry talks, and hands-on workshops, we prepare students for real-world applications.
+          </p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-6 shadow hover:shadow-xl transition">
+          <h5 class="text-yellow-500 font-semibold mb-2 text-lg">Leadership & Networking</h5>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            We develop leadership capacity and link students with professionals, alumni, and mentors.
+          </p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-6 shadow hover:shadow-xl transition">
+          <h5 class="text-yellow-500 font-semibold mb-2 text-lg">Community Engagement</h5>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            We support outreach programs, conservation initiatives, and social impact projects.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="team" class="section">
+  <div class="container">
+    <h2 class="section-title animate-fade-up">Our Team</h2>
+
+    <!-- Patron -->
+    <div class="subsection animate-fade-up">
+      <h3 class="sub-title">Patron</h3>
+      <div class="team-grid">
+        <div class="card animate-zoom-in">
+          <img src="female_user.png" alt="Prof. Patron">
+          <h4>Dr. Juliah Wangari pHD</h4>
+          <p class="role">Association Patron</p>
+          <p>Offering strategic guidance, mentorship, and academic leadership to the association's activities and vision.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Executive Committee -->
+    <div class="subsection animate-fade-up">
+      <h3 class="sub-title">Executive Committee</h3>
+      <div class="team-grid">
+        <div class="card animate-zoom-in">
+          <img src="male-user.png" alt="Tendo Kiwoi">
+          <h4>Tendo Kiwoi</h4>
+          <p class="role">President</p>
+          <p>Leads the association with focus on growth, inclusivity, and member engagement.</p>
+        </div>
+        <div class="card animate-zoom-in">
+          <img src="female_user.png" alt="Shaneal Nickson">
+          <h4>Shaneal Nickson</h4>
+          <p class="role">Vice President</p>
+          <p>Supports leadership operations and strategic planning.</p>
+        </div>
+        <div class="card animate-zoom-in">
+          <img src="eng_brian.jpg" alt="Brian Odhiambo">
+          <h4>Brian Odhiambo</h4>
+          <p class="role">Secretary General</p>
+          <p>Visionary leader championing unity, innovation, and student empowerment in mining.</p>
+        </div>
+        <div class="card animate-zoom-in">
+          <img src="male-user.png" alt="Sadiq Nyanje">
+          <h4>Sadiq Nyanje</h4>
+          <p class="role">Treasurer</p>
+          <p>Promotes transparency in resource allocation and financial planning.</p>
+        </div>
+        <div class="card animate-zoom-in">
+          <img src="female_user.png" alt="Ruth Igunza">
+          <h4>Ruth Igunza</h4>
+          <p class="role">Event Coordinator</p>
+          <p>Drives vibrant student engagement through well-organized events and workshops.</p>
+        </div>
+        <div class="card animate-zoom-in">
+          <img src="male-user.png" alt="AMMPES Official">
+          <h4>AMMPES Official</h4>
+          <p class="role">Media & Publications Officer</p>
+          <p>Leads creative content, branding, and communication outreach.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Class Delegates -->
+    <div class="subsection animate-fade-up">
+      <h3 class="sub-title">Class Delegates</h3>
+      <div class="team-grid">
+        <div class="card animate-zoom-in">
+          <h4>John Mwangi</h4>
+          <p class="role">1st Year Representative</p>
+        </div>
+        <div class="card animate-zoom-in">
+          <h4>Kipkoech Victor</h4>
+          <p class="role">2nd Year Representative</p>
+        </div>
+        <div class="card animate-zoom-in">
+          <h4>Ian W.</h4>
+          <p class="role">3rd Year Representative</p>
+        </div>
+        <div class="card animate-zoom-in">
+          <h4>Class representative</h4>
+          <p class="role">4th Year Representative</p>
+        </div>
+        <div class="card animate-zoom-in">
+          <h4>Class representative</h4>
+          <p class="role">5th Year Representative</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .dark-bg {
+    background-color: #eee9e907;
+    color: #fff;
+    padding: 4rem 1.5rem;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #050505;
+  }
+
+  .sub-title {
+    font-size: 2rem;
+    margin: 2rem 0 1.5rem;
+    border-left: 5px solid #5018fa;
+    padding-left: 1rem;
+    color: #6db8fd;
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .card {
+    background: #1a1a1ad7;
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    transition: all 0.4s ease;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .card img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #ffd700;
+  }
+
+  .card h4 {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 0.3rem;
+  }
+
+  .card .role {
+    color: #ffd700;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #ccc;
+  }
+
+  .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  }
+
+  @media (max-width: 600px) {
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .sub-title {
+      font-size: 1.5rem;
+    }
+
+    .card img {
+      width: 140px;
+      height: 140px;
+    }
+  }
+
+  /* Animations */
+  .animate-fade-up {
+    animation: fadeUp 1s ease forwards;
+  }
+
+  .animate-zoom-in {
+    animation: zoomIn 1s ease forwards;
+  }
+
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes zoomIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.85);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+</style>
+
+<script>
+  // Simple scroll reveal animation trigger
+  const reveal = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  };
+
+  const options = {
+    threshold: 0.1,
+  };
+
+  const observer = new IntersectionObserver(reveal, options);
+
+  document.querySelectorAll('.animate-fade-up, .animate-zoom-in').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+
+<section id="projects" class="section bg-gray-50 py-12">
+  <div class="container max-w-4xl mx-auto px-4">
+    <h3 class="text-3xl font-bold text-center text-gray-900 mb-6">Our Projects</h3>
+
+    <!-- Collapsible Note -->
+    <div class="mb-6">
+      <button id="note-toggle" class="w-full text-left bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 px-4 py-3 rounded-lg shadow-sm font-semibold flex justify-between items-center">
+        <span>A Note to Our Members</span>
+        <svg id="note-icon" class="w-5 h-5 transition-transform duration-200 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div id="note-content" class="mt-3 px-4 py-3 text-base text-yellow-800 bg-yellow-50 rounded-lg hidden leading-relaxed">
+        <p>
+          At present, the <strong>Association of Mining and Mineral Processing Engineering Students (AMMPES)</strong> has not yet launched official projects. However, a number of impactful initiatives are already in the pipeline—crafted with you in mind.
+        </p>
+        <p class="mt-2">
+          We sincerely believe that your participation and enthusiasm are the missing pieces that will bring these projects to life. So why not <strong>join us today</strong>? As a member, you will be at the forefront of transformative student-led activities in mining and mineral processing engineering.
+        </p>
+        <p class="mt-2">
+          Stay tuned right here and across all our media platforms—we'll notify you the moment projects are launched.
+        </p>
+      </div>
+    </div>
+
+    <!-- Placeholder project list (optional if you want to show planned ones) -->
+    <ul class="list-disc list-inside text-gray-700">
+     
+    </ul>
+  </div>
+</section>
+
+<script>
+  const toggleBtn = document.getElementById('note-toggle');
+  const noteContent = document.getElementById('note-content');
+  const icon = document.getElementById('note-icon');
+
+  toggleBtn.addEventListener('click', () => {
+    noteContent.classList.toggle('hidden');
+    icon.classList.toggle('rotate-180');
+  });
+</script>
+
+
+  <section id="join" class="section highlight">
+    <div class="container">
+      <h3>Join Us</h3>
+      <p>Be part of a growing professional network. Whether you're a student or a seasoned engineer, our association provides resources, mentorship, and a voice in shaping the future of mining.</p>
+      <a href="mailto:info@miningassociation.org" class="btn">Become a Member</a>
+    </div>
+  </section>
+
+  <section id="contact" class="section dark-bg">
+    <div class="container contact-flex">
+      <div class="contact-form-container">
+        <h3>Contact Us</h3>
+
+        <p>If you have any questions, suggestions, or would like to collaborate with us, please fill out the form below or reach out via email or directly give us a call.</p>
+        <p>We would love to hear from you!<br><br></p>
+
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+        <ul>
+            <li>Email: <a href="mailto:info@ammpesjkuat.org" style="color: yellow;">info@ammpesjkuat.org</a></li>
+          <li>Phone: +254-702-4957-76</li>
+          <li>Location: MINING AND MINERAL PROCESSING ENGINEERING DEPARTMENT, JKUAT MAIN CAMPUS, JUJA</li>
+        </ul>
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.08923558552!2d37.009787873972954!3d-1.0953595354451748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f462405558979%3A0x85ffa7a08df2010f!2sInnovation%20and%20Prototyping%20Integrated%20Centre%20(iPIC)!5e0!3m2!1sen!2ske!4v1744296630744!5m2!1sen!2ske" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="section highlight" style="background-color: #1f1f1f; color: white; text-align: center; padding: 2rem 0;">
+    <div class="container">
+      <h3>Follow Us</h3>
+      <p>Stay updated with our latest news and events by following us on our social media platforms.</p>
+      <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1rem;">
+        <a href="https://www.facebook.com/ammpesjkuat" target="_blank" class="btn" style="background: none; color: white; font-size: 1.5rem;">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://twitter.com/ammpesjkuat" target="_blank" class="btn" style="background: none; color: white; font-size: 1.5rem;">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/ammpesjkuat/" target="_blank" class="btn" style="background: none; color: white; font-size: 1.5rem;">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/ammpesjkuat" target="_blank" class="btn" style="background: none; color: white; font-size: 1.5rem;">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+ <style>
+.contact-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.contact-form-container {
+  flex: 1;
+  min-width: 300px;
+}
+
+.map-container {
+  flex: 1;
+  min-width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+</style>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 AMMPES JKUAT | Designed by <a href="https://engineerodhiambo.netlify.app" style="color: yellow;">Brian Odhiambo</a>. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f3f2ef;
+  color: #2d2d2d;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #3e3e3e;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+}
+
+.nav-links a {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.section {
+  padding: 3rem 1rem;
+}
+
+.dark-bg {
+  background-color: #292929;
+  color: #eaeaea;
+}
+
+.highlight {
+  background-color: #fffbe6;
+  color: #2d2d2d;
+}
+
+.section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  background-color: #d4af37;
+  color: #2d2d2d;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  height: 120px;
+}
+
+.footer {
+  background-color: #1f1f1f;
+  color: #bbb;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+</style>
+</html>
+<script>
+  // Smooth scrolling for navigation links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
