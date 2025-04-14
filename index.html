@@ -31,6 +31,7 @@
   <div class="overlay" id="overlay"></div>
   
   <section class="hero">
+    <img src="closeup-shot-ongoing-construction-with-tracks-bulldozer-abandoned-land (1).jpg" class="hero-bg" />
     <div class="container hero-content">
         <div class="hero-text">
           <h2>Welcome to AMMPES JKUAT</h2>
@@ -62,6 +63,11 @@
 
 
 <style>
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: transparent;
+}
+
 .menu-button {
   display: none;
   background: none;
@@ -242,6 +248,17 @@
     background-attachment: fixed;
 
   }
+
+  .hero-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1; /* push behind content */
+}
+
   .hero-content {
     max-width: 100%;
     padding: 1rem 1rem;
@@ -262,12 +279,11 @@
 }
 
 </style>
-
-<section id="about" class="py-16 bg-white">
+<section id="about" class="py-16 bg-transparent">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <!-- About Us -->
-    <div class="text-center mb-12">
+    <div class="text-center mb-12 bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition">
       <h3 class="text-3xl md:text-4xl font-bold text-gray-900">About Us</h3>
       <p class="mt-4 text-gray-600 text-left text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
         The <strong>Association of Mining and Mineral Processing Engineering Students (AMMPES)</strong> is a dynamic student-led body committed to fostering academic excellence, professional growth, and innovation in the fields of mining and mineral processing. We serve as a platform for collaboration, leadership development, industry engagement, and advocacy for sustainable engineering practices. Through technical forums, mentorship, industrial exposure, and community initiatives, AMMPES empowers the next generation of mining engineers to lead with purpose and impact.
@@ -292,8 +308,40 @@
     </div>
 
     <!-- Core Values -->
-    <div class="mt-16">
-      <h4 class="text-2xl font-bold text-center text-gray-900 mb-10">Our Core Values</h4>
+    <div class="mt-16 bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition">
+      <div class="relative w-full flex justify-center">
+        <!-- Skewed Background -->
+        <div class="absolute -skew-x-12 bg-white px-6 py-2 shadow-md z-0"></div>
+      
+        <!-- Animated Text -->
+        <h4 class="relative text-2xl font-bold text-gray-900 z-10 overflow-hidden">
+          <span class="block animate-tv-reveal">Our Core Values</span>
+        </h4>
+      </div>
+
+      <style>
+        @keyframes tv-reveal {
+          0% {
+            transform: translateY(100%);
+            opacity: 0;
+          }
+          60% {
+            transform: translateY(-10%);
+            opacity: 1;
+          }
+          100% {
+            transform: translateY(0%);
+          }
+        }
+        
+        .animate-tv-reveal {
+          display: inline-block;
+          animation: tv-reveal 1.2s ease-out forwards;
+        }
+        </style>
+        
+
+      <p class="text-gray-600 text-center mt-4 mb-8">We are guided by our core values that shape our identity and mission.</p>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="bg-white p-5 rounded-xl border hover:shadow-lg transition">
           <h5 class="text-yellow-500 font-semibold mb-2">Integrity</h5>
@@ -323,7 +371,7 @@
     </div>
 
     <!-- What We Do -->
-    <div class="mt-20">
+    <div class="mt-20 bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition">
       <h4 class="text-2xl font-bold text-center text-gray-900 mb-10">What We Do</h4>
       <div class="grid gap-8 md:grid-cols-2">
         <div class="bg-gray-50 rounded-xl p-6 shadow hover:shadow-xl transition">
@@ -356,7 +404,7 @@
   </div>
 </section>
 
-<section id="team" class="section">
+<section id="team" class="section bg-white py-12">
   <div class="container">
     <h2 class="section-title animate-fade-up">Our Team</h2>
 
@@ -720,12 +768,11 @@
     </div>
   </footer>
 </body>
-
 <style>
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: #f3f2ef;
+  background-color: transparent;
   color: #2d2d2d;
 }
 
@@ -766,7 +813,7 @@ body {
 }
 
 .section {
-  padding: 3rem 1rem;
+  padding: 1rem 1rem;
 }
 
 .dark-bg {
