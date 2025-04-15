@@ -742,7 +742,7 @@ body {
     <div class="container">
       <h3>Join Us</h3>
       <p>Be part of a growing professional network. Whether you're a student or a seasoned engineer, our association provides resources, mentorship, and a voice in shaping the future of mining.</p>
-      <a href="join_ammpes.html" class="btn">Become a Member</a>
+      <a href="join_ammpes.html" class="btn">Become a Member or Benefits of joining?</a>
     </div>
   </section>
 
@@ -754,12 +754,16 @@ body {
         <p>If you have any questions, suggestions, or would like to collaborate with us, please fill out the form below or reach out via email or directly give us a call.</p>
         <p>We would love to hear from you!<br><br></p>
 
-        <form class="contact-form">
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea placeholder="Your Message" required></textarea>
+        <form name="contact" method="POST" data-netlify="true" class="contact-form">
+          <input type="hidden" name="form-name" value="contact" />
+          
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          
           <button type="submit" class="btn">Send Message</button>
         </form>
+        
         <ul>
             <li>Email: <a href="mailto:ammpesjkuat@gmail.com" style="color: yellow;">ammpesjkuat@gmail.com</a></li>
           <li>Phone: +254-702-4957-76</li>
