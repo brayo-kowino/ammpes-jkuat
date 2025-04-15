@@ -321,7 +321,7 @@ body {
           <a target="_blank" title="♬ original sound - AMMPES JKUAT" href="https://www.tiktok.com/music/original-sound-7440360383510022967?refer=embed">♬ original sound - AMMPES JKUAT</a>
         </section>
       </blockquote> 
-      <script async src="https://www.tiktok.com/embed.js"></script>
+     
     </div>
 
     <!-- TikTok CTA -->
@@ -817,9 +817,6 @@ body {
   overflow: hidden;
 }
 </style>
-
-  
-
   <footer class="footer">
     <p class="mb-1">
       Designed by <span class="font-semibold text-yellow-400">Brian Odhiambo</span> &bull; 
@@ -833,6 +830,19 @@ body {
     // Auto-update the year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
+<script async src="https://www.tiktok.com/embed.js"></script>
+<script>
+  // Smooth scrolling for navigation links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
   
 </body>
 <style>
@@ -940,14 +950,4 @@ body {
 }
 </style>
 </html>
-<script>
-  // Smooth scrolling for navigation links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
-</script>
+
