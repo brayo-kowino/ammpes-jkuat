@@ -7,11 +7,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
    <meta name="google-site-verification" content="SQdDp4AXcCEK9WRGaj5cMJEUH9BpbtANMEoLkKA6inc" />
 
 </head>
 <body>
-  <header class="header" style="position: fixed; top: 0; width: 100%; z-index: 1000;">
+  <header class="header" style="position: fixed; top: 0; width: 100%; z-index: 1000; height: 70px">
     <div class="container header-flex">
       <h1 class="logo">AMMPES</h1>
       <nav>
@@ -27,18 +29,49 @@
       </nav>
     </div>
   </header>
-  <!-- Overlay for mobile -->
-  <div class="overlay" id="overlay"></div>
-  
-  <section class="hero">
-    <img src="closeup-shot-ongoing-construction-with-tracks-bulldozer-abandoned-land (1).jpg" class="hero-bg" />
-    <div class="container hero-content">
-        <div class="hero-text">
-          <h2>Welcome to AMMPES JKUAT</h2>
-            <p>"Mining is not just about extracting resources; it's about building a legacy of innovation, sustainability, and community. The equipment in this image represents the heart of the industry, the machines that power our progress. It’s a reminder of the work done by skilled professionals to extract the precious minerals that fuel global development. Our association, the AMMPES, plays a crucial role in ensuring that mining is not only safe and sustainable but also a source of pride and opportunity for future generations. By advancing education, fostering industry collaboration, and advocating for responsible practices, we aim to enhance the mining profession. Remember, if it cannot be grown, then it has to be mined." <br><br> Dr. Juliah Wangari, Patron AMMPES</p>
+ <section class="relative w-full flex items-center justify-center overflow-hidden font-sans mt-16">
+  <!-- Background Image -->
+  <img src="closeup-shot-ongoing-construction-with-tracks-bulldozer-abandoned-land (1).jpg" 
+       alt="Mining background" 
+       class="absolute inset-0 w-full h-full object-cover brightness-[0.4]">
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/80"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 text-center text-white px-6 md:px-12 max-w-5xl">
+    <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-8" 
+        style="font-family: 'Montserrat', sans-serif; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); margin-top: 12px;">
+      Welcome to;<br>
+      <span class="text-yellow-400">AMMPES JKUAT</span>
+    </h2>
+
+    <!-- Patron Speech Box -->
+    <div class="relative max-w-3xl mx-auto text-left" style="position: relative; background: rgba(255, 255, 255, 0.12);border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 20px; margin-bottom: 20px; max-width: 700px;backdrop-filter: blur(12px);-webkit-backdrop-filter: blur(12px);color: #fff;font-style: italic;box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);margin-top: 2rem;transition: backdrop-filter 0.3s ease, background 0.3s ease;">
+      <!-- Speech bubble -->
+      <div class="relative bg-white/45 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 shadow-2xl">
+        <div class="flex items-start gap-4">
+          <img src="dr_juliah_patron.jpg" alt="Dr. Juliah Wangari" 
+               class="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-yellow-400 shadow-md">
+          <div>
+            <p class="italic text-gray-100 leading-relaxed text-base md:text-lg">
+              “Mining is not just about extracting resources; it's about building a legacy of innovation, sustainability, and community. 
+              The equipment in this image represents the heart of the industry the machines that power our progress. 
+              It’s a reminder of the work done by skilled professionals to extract the precious minerals that fuel global development. 
+              Our association, the AMMPES, plays a crucial role in ensuring that mining is not only safe and sustainable but also a source of pride and opportunity for future generations. 
+              By advancing education, fostering industry collaboration, and advocating for responsible practices, we aim to enhance the mining profession. 
+              Remember, if it cannot be grown, then it has to be mined.”
+            </p>
+            <p class="mt-4 font-semibold text-yellow-400">Dr. Juliah Wangari, Patron AMMPES</p>
+          </div>
         </div>
+
+      <!-- Speech Tail (Arrow) -->
+      <div class="absolute left-16 md:left-20 -bottom-6 w-0 h-0 border-t-[20px] border-t-white/15 border-l-[20px] border-l-transparent border-r-[20px] border-r-transparent opacity-80"></div>
     </div>
+  </div>
 </section>
+
 <script>
   const menuToggle = document.getElementById('menu-toggle');
   const navMenu = document.getElementById('nav-menu');
@@ -60,7 +93,6 @@
     overlay.classList.remove('active');
   });
 </script>
-
 
 <style>
 body {
@@ -163,585 +195,583 @@ body {
     display: block;
   }
 }
-
-.hero {
-  margin-top: 76px;
-  background: linear-gradient(to right, #2d2d2d, #4d4d4d);
-  background-image: url('closeup-shot-ongoing-construction-with-tracks-bulldozer-abandoned-land (1).jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  padding: 4rem 1rem;
-}
-
-.hero-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1; /* push behind content */
-}
-
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  text-align: center;
-  height: 60vh;
-  max-width: 800px; 
-  margin-top: auto;
-  margin-bottom: auto;
-  font-size: 1.2rem;
-  line-height: 1.2;
-  background-color: rgba(0, 0, 0, 0.2);
-  font-weight: 20;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease;
-}
-.hero-content:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
-}
-.hero-text h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  margin-top: auto;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.hero-text p {
-  font-size: 0.9rem;
-  font-style: italic;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-  line-height: 1.8;
-  max-width: 50%;
-  background: rgba(0, 0, 0, 0.4);
-  margin: auto;
-  margin-top: auto;
-  margin-bottom: auto;
-  padding: 0 1rem;
-  text-align: justify;
-  border-radius: 10px;
-  padding: 1rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  border: 2px solid #d4af37;
-  transition: all 0.3s ease;
-}
-
-.hero-text p:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
-}
-
-@media (max-width: 768px) {
-  .hero-text h2 {
-    font-size: 1.5rem;
-  }
-  .hero-text p {
-    font-size: 0.9rem;
-    line-height: 1.3;
-    padding: 0.5rem 0.8rem;
-    max-width: 100%;
-    margin: auto;
-  }
-
-  .hero {
-    height: 80vh;
-    padding: 0.5rem 0.5rem;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-
-  }
-
-  .hero-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1; /* push behind content */
-}
-
-  .hero-content {
-    max-width: 100%;
-    padding: 1rem 1rem;
-  }
-  .hero-text {
-    max-width: 100% !important;
-    padding: 0.5rem 0.5rem;
-  }
-
-  .hero-text h2 {
-    font-size: 1.8rem;
-  }
-  .hero-text p {
-    width: 100%;
-    max-width: 100%;
-    font-size: 0.9rem;
-  }
-}
 </style>
-<section id="promo" class="py-14 bg-gradient-to-br from-black via-zinc-900 to-black text-white">
-  <div class="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16 text-center">
-    <h2 class="text-0xl md:text-0xl font-extrabold text-yellow-400 drop-shadow-md mb-0 animate-bounce">
-    </h2>
 
-    <p class="text-1.2xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto italic leading-relaxed">
-      We didn’t just set the stage, <span class="text-yellow-300 font-semibold">we ignited it</span>.  
-      But next time, it won’t be the same without <span class="underline text-yellow-500 font-bold">you</span>.  
-      <br />
-      Experience the AMMPES energy. Feel the rhythm. Be part of the movement.
-      <br />
-      <span class="text-yellow-400 font-bold text-lg block mt-2">#AMMPESOnTikTok</span>
-    </p>
+    <!-- About Us -->
+<section class="relative py-16 bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 flex flex-col md:flex-row items-center gap-10">
+    
+    <!-- Text Section -->
+    <div class="md:w-1/2">
+      <h3 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-6">
+        About <span class="text-yellow-600">Us</span>
+      </h3>
+      <p class="text-gray-700 text-base md:text-lg leading-relaxed">
+        The <strong class="text-gray-900">Association of Mining and Mineral Processing Engineering Students (AMMPES)</strong> 
+        is a vibrant, student-driven community dedicated to advancing excellence, innovation, and sustainability in the 
+        fields of mining and mineral processing.  
+      </p>
+      <p class="mt-4 text-gray-700 text-base md:text-lg leading-relaxed">
+        We create opportunities for <span class="font-semibold text-indigo-600">collaboration</span>, 
+        <span class="font-semibold text-indigo-600">leadership development</span>, and 
+        <span class="font-semibold text-indigo-600">industry engagement</span> through mentorships, technical events, 
+        and community projects empowering tomorrow’s engineers to shape a smarter, cleaner, and sustainable future.
+      </p>
 
-    <!-- Embedded TikTok Video -->
-    <div class="flex justify-center items-center">
-      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@ammpesjkuat/video/7440360356318285111" data-video-id="7440360356318285111" style="max-width: 605px; min-width: 325px;" >
-        <section> 
-          <a target="_blank" title="@ammpesjkuat" href="https://www.tiktok.com/@ammpesjkuat?refer=embed">@ammpesjkuat</a> launching of Youth in Extractives consortium (YEC) at KCA University main campus. 
-          <a title="yec" target="_blank" href="https://www.tiktok.com/tag/yec?refer=embed">#YEC</a>
-          <a title="ammpes" target="_blank" href="https://www.tiktok.com/tag/ammpes?refer=embed">#AMMPES</a>
-          <a title="mesk." target="_blank" href="https://www.tiktok.com/tag/mesk.?refer=embed">#MESK.</a> 
-          <a target="_blank" title="♬ original sound - AMMPES JKUAT" href="https://www.tiktok.com/music/original-sound-7440360383510022967?refer=embed">♬ original sound - AMMPES JKUAT</a>
-        </section>
-      </blockquote>  
+      <div class="mt-6">
+        <a href="#team" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-transform transform hover:scale-105">
+          Meet the Team
+        </a>
+      </div>
     </div>
 
-    <!-- TikTok CTA -->
-    <p class="mt-8 text-gray-300 text-1xl">
-      Follow us on <a href="https://www.tiktok.com/@ammpesjkuat" class="text-yellow-400 hover:underline font-semibold">TikTok</a>  
-      and show us how you catch the AMMPES wave.
-    </p>
+    <!-- Image Section -->
+    <div class="md:w-1/2 relative">
+      <div class="rounded-2xl overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-500">
+        <img src="IMG-20250227-WA0021.jpg" 
+             alt="Mining Students" 
+             class="w-full h-[380px] object-cover">
+      </div>
+      <!-- Decorative Shape -->
+      <div class="absolute -z-10 -bottom-8 -right-8 w-48 h-48 bg-indigo-200 rounded-full blur-3xl opacity-50"></div>
+    </div>
+
+  </div>
+</section>
+
+    
+
+   <!-- Mission & Vision -->
+<section class="py-16 bg-gradient-to-br from-gray-50 via-white to-gray-100">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">
+        Mission & <span class="text-indigo-600">Vision</span>
+      </h2>
+      <p class="text-gray-600 text-lg max-w-3xl mx-auto">
+        We are driven by purpose to shape the next generation of student engineers through innovation, sustainability, and leadership.
+      </p>
+    </div>
+
+    <div class="grid gap-10 md:grid-cols-2">
+      <!-- Mission Card -->
+      <div class="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2 p-8 overflow-hidden">
+        <div class="absolute -top-6 -right-6 w-32 h-32 bg-yellow-100 rounded-full blur-3xl opacity-40"></div>
+        <div class="flex flex-col items-center text-center relative z-10">
+          <div class="bg-yellow-500/10 p-4 rounded-full mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h4 class="text-2xl font-bold text-yellow-600 mb-3">Our Mission</h4>
+          <p class="text-gray-700 text-base leading-relaxed">
+            To create a vibrant and inclusive environment where students explore innovation, sustainability, and professionalism in mining and mineral processing through academic and industrial engagement.
+          </p>
+        </div>
+      </div>
+
+      <!-- Vision Card -->
+      <div class="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2 p-8 overflow-hidden">
+        <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-indigo-100 rounded-full blur-3xl opacity-40"></div>
+        <div class="flex flex-col items-center text-center relative z-10">
+          <div class="bg-indigo-500/10 p-4 rounded-full mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm0 10c-4.418 0-8-3.582-8-8 0-.895.146-1.758.414-2.57L2.5 5.5l5.93 1.086C9.56 5.61 10.74 5 12 5c4.418 0 8 3.582 8 8 0 4.418-3.582 8-8 8z" />
+            </svg>
+          </div>
+          <h4 class="text-2xl font-bold text-indigo-600 mb-3">Our Vision</h4>
+          <p class="text-gray-700 text-base leading-relaxed">
+            To be a leading student body that nurtures skilled, ethical, and future-ready engineers transforming the mining industry sustainably for generations to come.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 
-
-<section id="about" class="py-16 bg-transparent">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-    <!-- About Us -->
-    <div class="text-center mb-12 bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition">
-      <h3 class="text-3xl md:text-4xl font-bold text-gray-900">About Us</h3>
-      <p class="mt-4 text-gray-600 text-left text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
-        The <strong>Association of Mining and Mineral Processing Engineering Students (AMMPES)</strong> is a dynamic student-led body committed to fostering academic excellence, professional growth, and innovation in the fields of mining and mineral processing. We serve as a platform for collaboration, leadership development, industry engagement, and advocacy for sustainable engineering practices. Through technical forums, mentorship, industrial exposure, and community initiatives, AMMPES empowers the next generation of mining engineers to lead with purpose and impact.
-      </p>
-    </div>
-    
-
-    <!-- Mission & Vision -->
-    <div class="grid gap-8 md:grid-cols-2">
-      <div class="rounded-xl p-6 bg-gray-50 shadow-md hover:shadow-xl transition">
-        <h4 class="text-xl font-semibold text-yellow-500 mb-3 text-center">Our Mission</h4>
-        <p class="text-gray-700 text-justify leading-relaxed">
-          To create a vibrant and inclusive environment for students to explore innovation, sustainability, and professionalism in mining and mineral processing through academic and industrial engagement.
-        </p>
-      </div>
-      <div class="rounded-xl p-6 bg-gray-50 shadow-md hover:shadow-xl transition">
-        <h4 class="text-xl font-semibold text-yellow-500 mb-3 text-center">Our Vision</h4>
-        <p class="text-gray-700 text-justify leading-relaxed">
-          To be a leading student body that nurtures skilled, ethical, and future-ready engineers transforming the mining industry sustainably.
-        </p>
-      </div>
-    </div>
-
     <!-- Core Values -->
-    <div class="mt-16 bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition">
-      <div class="relative w-full flex justify-center">
-        <!-- Skewed Background -->
-        <div class="absolute -skew-x-12 bg-white px-6 py-2 shadow-md z-0"></div>
+<section class="py-16 bg-gradient-to-br from-gray-50 via-white to-gray-100 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+
+    <!-- Title -->
+    <div class="relative text-center mb-12">
+      <h4 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-4 relative z-10">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-yellow-500 animate-gradient">
+          Our Core Values
+        </span>
+      </h4>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+        The foundation of everything we do guiding our actions, mindset, and purpose as future mining engineers.
+      </p>
+
+      <!-- Decorative Glow -->
+      <div class="absolute inset-x-1/2 -translate-x-1/2 top-0 w-64 h-64 bg-indigo-200 rounded-full blur-3xl opacity-30"></div>
+    </div>
+
+    <!-- Core Values Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       
-        <!-- Animated Text -->
-        <h4 class="relative text-2xl font-bold text-gray-900 z-10 overflow-hidden">
-          <span class="block animate-tv-reveal">Our Core Values</span>
-        </h4>
+      <!-- Single Value Card -->
+      <div class="group bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100">
+        <div class="flex flex-col items-center text-center">
+          <div class="bg-indigo-50 p-4 rounded-full mb-4 group-hover:bg-indigo-100 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+          </div>
+          <h5 class="text-lg font-bold text-indigo-600 mb-2">Integrity</h5>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            We uphold honesty and strong moral principles in all our engagements.
+          </p>
+        </div>
       </div>
 
-      <style>
-        @keyframes tv-reveal {
-          0% {
-            transform: translateY(100%);
-            opacity: 0;
-          }
-          60% {
-            transform: translateY(-10%);
-            opacity: 1;
-          }
-          100% {
-            transform: translateY(0%);
-          }
-        }
-        
-        .animate-tv-reveal {
-          display: inline-block;
-          animation: tv-reveal 1.2s ease-out forwards;
-        }
-        </style>
-        
+      <div class="group bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100">
+        <div class="flex flex-col items-center text-center">
+          <div class="bg-yellow-50 p-4 rounded-full mb-4 group-hover:bg-yellow-100 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h5 class="text-lg font-bold text-yellow-600 mb-2">Innovation</h5>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            We nurture creative thinking to solve challenges in mining and technology.
+          </p>
+        </div>
+      </div>
 
-      <p class="text-gray-600 text-center mt-4 mb-8">We are guided by our core values that shape our identity and mission.</p>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white p-5 rounded-xl border hover:shadow-lg transition">
-          <h5 class="text-yellow-500 font-semibold mb-2">Integrity</h5>
-          <p class="text-gray-600 text-sm leading-relaxed">We uphold honesty and strong moral principles in all our engagements.</p>
+      <div class="group bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100">
+        <div class="flex flex-col items-center text-center">
+          <div class="bg-indigo-50 p-4 rounded-full mb-4 group-hover:bg-indigo-100 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8l4 4-4 4m0-8v8" />
+            </svg>
+          </div>
+          <h5 class="text-lg font-bold text-indigo-600 mb-2">Excellence</h5>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            We pursue high standards in academics, events, and leadership.
+          </p>
         </div>
-        <div class="bg-white p-5 rounded-xl border hover:shadow-lg transition">
-          <h5 class="text-yellow-500 font-semibold mb-2">Innovation</h5>
-          <p class="text-gray-600 text-sm leading-relaxed">We nurture creative thinking to solve challenges in mining and technology.</p>
+      </div>
+
+      <div class="group bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100">
+        <div class="flex flex-col items-center text-center">
+          <div class="bg-yellow-50 p-4 rounded-full mb-4 group-hover:bg-yellow-100 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <h5 class="text-lg font-bold text-yellow-600 mb-2">Sustainability</h5>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            We promote responsible mining that safeguards the planet’s future.
+          </p>
         </div>
-        <div class="bg-white p-5 rounded-xl border hover:shadow-lg transition">
-          <h5 class="text-yellow-500 font-semibold mb-2">Excellence</h5>
-          <p class="text-gray-600 text-sm leading-relaxed">We pursue high standards in academics, events, and leadership.</p>
+      </div>
+
+      <div class="group bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100">
+        <div class="flex flex-col items-center text-center">
+          <div class="bg-indigo-50 p-4 rounded-full mb-4 group-hover:bg-indigo-100 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 17l4-4 4 4m0 0l-4-4-4 4m4-4V3" />
+            </svg>
+          </div>
+          <h5 class="text-lg font-bold text-indigo-600 mb-2">Collaboration</h5>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            We encourage teamwork and unity within and beyond our community.
+          </p>
         </div>
-        <div class="bg-white p-5 rounded-xl border hover:shadow-lg transition">
-          <h5 class="text-yellow-500 font-semibold mb-2">Sustainability</h5>
-          <p class="text-gray-600 text-sm leading-relaxed">We promote responsible mining that safeguards the planet’s future.</p>
-        </div>
-        <div class="bg-white p-5 rounded-xl border hover:shadow-lg transition">
-          <h5 class="text-yellow-500 font-semibold mb-2">Collaboration</h5>
-          <p class="text-gray-600 text-sm leading-relaxed">We encourage teamwork and unity within and beyond our community.</p>
-        </div>
-        <div class="bg-white p-5 rounded-xl border hover:shadow-lg transition">
-          <h5 class="text-yellow-500 font-semibold mb-2">Leadership</h5>
-          <p class="text-gray-600 text-sm leading-relaxed">We empower students to become confident and ethical leaders.</p>
+      </div>
+
+      <div class="group bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100">
+        <div class="flex flex-col items-center text-center">
+          <div class="bg-yellow-50 p-4 rounded-full mb-4 group-hover:bg-yellow-100 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0-1.105.895-2 2-2h8v12H2V9h8a2 2 0 012 2z" />
+            </svg>
+          </div>
+          <h5 class="text-lg font-bold text-yellow-600 mb-2">Leadership</h5>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            We empower students to become confident and ethical leaders.
+          </p>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<style>
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientFlow 5s ease infinite;
+}
+</style>
+
 
     <!-- What We Do -->
-    <div class="mt-20 bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition">
-      <h4 class="text-2xl font-bold text-center text-gray-900 mb-10">What We Do</h4>
-      <div class="grid gap-8 md:grid-cols-2">
-        <div class="bg-gray-50 rounded-xl p-6 shadow hover:shadow-xl transition">
-          <h5 class="text-yellow-500 font-semibold mb-2 text-lg">Academic Support</h5>
+<section class="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-100 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+
+    <!-- Section Title -->
+    <div class="text-center mb-12 relative">
+      <h4 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-yellow-500 animate-gradient">
+          What We Do
+        </span>
+      </h4>
+      <p class="text-gray-600 text-lg max-w-3xl mx-auto">
+        
+      </p>
+
+      <!-- Glow Accent -->
+      <div class="absolute inset-x-1/2 -translate-x-1/2 top-0 w-72 h-72 bg-indigo-200 rounded-full blur-3xl opacity-30"></div>
+    </div>
+
+    <!-- What We Do Grid -->
+    <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+      
+      <!-- Card 1 -->
+      <div class="group bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100">
+        <div class="flex flex-col items-center text-center">
+          <div class="bg-indigo-50 p-4 rounded-full mb-4 group-hover:bg-indigo-100 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20l9-5-9-5-9 5 9 5zm0-10V4m0 6l9-5-9-5-9 5 9 5z" />
+            </svg>
+          </div>
+          <h5 class="text-lg font-bold text-indigo-600 mb-2">Academic Support</h5>
           <p class="text-gray-700 text-sm leading-relaxed">
             We run mentorships, academic clinics, and knowledge-sharing forums to empower academic success.
           </p>
         </div>
-        <div class="bg-gray-50 rounded-xl p-6 shadow hover:shadow-xl transition">
-          <h5 class="text-yellow-500 font-semibold mb-2 text-lg">Industrial Exposure</h5>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="group bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100">
+        <div class="flex flex-col items-center text-center">
+          <div class="bg-yellow-50 p-4 rounded-full mb-4 group-hover:bg-yellow-100 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <h5 class="text-lg font-bold text-yellow-600 mb-2">Industrial Exposure</h5>
           <p class="text-gray-700 text-sm leading-relaxed">
             Through field visits, industry talks, and hands-on workshops, we prepare students for real-world applications.
           </p>
         </div>
-        <div class="bg-gray-50 rounded-xl p-6 shadow hover:shadow-xl transition">
-          <h5 class="text-yellow-500 font-semibold mb-2 text-lg">Leadership & Networking</h5>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="group bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100">
+        <div class="flex flex-col items-center text-center">
+          <div class="bg-indigo-50 p-4 rounded-full mb-4 group-hover:bg-indigo-100 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18" />
+            </svg>
+          </div>
+          <h5 class="text-lg font-bold text-indigo-600 mb-2">Leadership & Networking</h5>
           <p class="text-gray-700 text-sm leading-relaxed">
             We develop leadership capacity and link students with professionals, alumni, and mentors.
           </p>
         </div>
-        <div class="bg-gray-50 rounded-xl p-6 shadow hover:shadow-xl transition">
-          <h5 class="text-yellow-500 font-semibold mb-2 text-lg">Community Engagement</h5>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="group bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100">
+        <div class="flex flex-col items-center text-center">
+          <div class="bg-yellow-50 p-4 rounded-full mb-4 group-hover:bg-yellow-100 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553 2.276A1 1 0 0120 13.118V17a2 2 0 01-2 2h-3v-2h2v-3l-3-1.5V9a2 2 0 012-2h1a1 1 0 011 1v2z" />
+            </svg>
+          </div>
+          <h5 class="text-lg font-bold text-yellow-600 mb-2">Community Engagement</h5>
           <p class="text-gray-700 text-sm leading-relaxed">
             We support outreach programs, conservation initiatives, and social impact projects.
           </p>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<style>
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientFlow 5s ease infinite;
+}
+</style>
+
 
   </div>
 </section>
 
-<section id="team" class="section bg-white py-12">
-  <div class="container">
-    <h2 class="section-title animate-fade-up">Our Team</h2>
+<!-- Our Team -->
+<section id="team" class="py-4 bg-gradient-to-b from-white to-gray-100">
+  <div class="max-w-7xl mx-auto px-6">
+    
+    <!-- Section Title -->
+    <h2 class="text-4xl md:text-5xl font-extrabold text-center text-gray-900 mb-8 tracking-tight">
+      Our Leadership Team
+    </h2>
 
     <!-- Patron -->
-    <div class="subsection animate-fade-up">
-      <h3 class="sub-title">Patron</h3>
-      <div class="team-grid">
-        <div class="card animate-zoom-in">
-          <img src="dr_juliah_patron.jpg" alt="Prof. Patron">
-          <h4>Dr. Juliah Wangari pHD</h4>
-          <p class="role">Association Patron</p>
-          <p>Offering strategic guidance, mentorship, and academic leadership to the association's activities and vision.</p>
+    <div class="mb-20 text-center">
+      <h3 class="text-2xl font-bold text-yellow-500 uppercase mb-10">Patron</h3>
+      <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition p-6 w-full md:w-1/3">
+          <div class="relative">
+            <img src="dr_juliah_patron.jpg" alt="Dr. Juliah Wangari" 
+                 class="w-72 aspect-square object-cover rounded-xl mb-4 border-4 border-yellow-400 ml-auto mr-auto">
+          </div>
+          <h4 class="text-xl font-bold text-gray-900">Dr. Juliah Wangari, PhD</h4>
+          <p class="text-yellow-500 font-semibold mb-2">Association Patron</p>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">
+            Offering strategic guidance, mentorship, and academic leadership to shape the vision and excellence of AMMPES.
+          </p>
+        
+          <div class="flex flex-wrap gap-6 text-xl font-medium items-center justify-center">
+            <a href="" target="_blank"
+              class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a href="" target="_blank"
+              class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+
+            <a href="" target="_blank"
+              class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </div>
+
         </div>
       </div>
     </div>
 
     <!-- Executive Committee -->
-    <div class="subsection animate-fade-up">
-      <h3 class="sub-title">Executive Committee</h3>
-      <div class="team-grid">
-        <div class="card animate-zoom-in">
-          <img src="tendo_picture.jpg" alt="Tendo Kiwoi">
-          <h4>Tendo Kiwoi</h4>
-          <p class="role">President</p>
-          <p>Leads the association with focus on growth, inclusivity, and member engagement.</p>
+    <div class="mb-8">
+      <h3 class="text-2xl font-bold text-yellow-500 text-center uppercase mb-10">Executive Committee</h3>
+      <div class="grid gap-10 sm:grid-cols-2 md:grid-cols-3">
+        
+        <!-- Member Card -->
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition p-6 text-center">
+          <img src="tendo_picture.jpg" alt="Tendo Kiwoi" 
+               class="w-72 aspect-square object-cover rounded-xl mb-4 border-4 border-yellow-400 ml-auto mr-auto">
+          <h4 class="text-lg font-bold text-gray-900">Eng. Tendo Kiwoi</h4>
+          <p class="text-yellow-500 font-semibold mb-1">President</p>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">
+            Leading the association with integrity, innovation, and inclusivity.
+          </p>
+                    <div class="flex flex-wrap gap-6 text-xl font-medium items-center justify-center">
+            <a href="" target="_blank"
+              class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a href="" target="_blank"
+              class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+
+            <a href="" target="_blank"
+              class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </div>
         </div>
-        <div class="card animate-zoom-in">
-          <img src="shaneal_image.jpg" alt="Shaneal Nickson">
-          <h4>Shaneal Nixon</h4>
-          <p class="role">Vice President</p>
-          <p>Supports leadership operations and strategic planning.</p>
+
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition p-6 text-center">
+          <img src="shaneal_image.jpg" alt="Shaneal Nixon" 
+               class="w-72 aspect-square object-cover rounded-xl mb-4 border-4 border-yellow-400 ml-auto mr-auto">
+          <h4 class="text-lg font-bold text-gray-900">Shaneal Nixon</h4>
+          <p class="text-yellow-500 font-semibold mb-1">Vice President</p>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">
+            Overseeing coordination, leadership, and operational excellence.
+          </p>
+                    <div class="flex flex-wrap gap-6 text-xl font-medium items-center justify-center">
+            <a href="" target="_blank"
+              class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a href="" target="_blank"
+              class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+
+            <a href="" target="_blank"
+              class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </div>
         </div>
-        <div class="card animate-zoom-in">
-          <img src="eng_brian.jpg" alt="Brian Odhiambo">
-          <h4>Brian Odhiambo</h4>
-          <p class="role">Secretary General</p>
-          <p>Visionary leader championing unity, innovation, and student empowerment in mining.</p>
+
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition p-6 text-center">
+          <img src="eng_brian.jpg" alt="Eng. Brian Odhiambo" 
+               class="w-72 aspect-square object-cover rounded-xl mb-4 border-4 border-yellow-400 ml-auto mr-auto">
+          <h4 class="text-lg font-bold text-gray-900">Brian Odhiambo</h4>
+          <p class="text-yellow-500 font-semibold mb-1">Secretary General</p>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">
+            Facilitating communication and organizational efficiency.
+          </p>
+                   <div class="flex flex-wrap gap-6 text-xl font-medium items-center justify-center">
+            <a href="" target="_blank"
+              class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a href="" target="_blank"
+              class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+
+            <a href="" target="_blank"
+              class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </div>
         </div>
-        <div class="card animate-zoom-in">
-          <img src="sadiq_image.jpg" alt="Sadiq Nyanje">
-          <h4>Sadiq Nyanje</h4>
-          <p class="role">Treasurer</p>
-          <p>Promotes transparency in resource allocation and financial planning.</p>
+
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition p-6 text-center">
+          <img src="sadiq_image.jpg" alt="Sadiq  " 
+               class="w-72 aspect-square object-cover rounded-xl mb-4 border-4 border-yellow-400 ml-auto mr-auto">
+          <h4 class="text-lg font-bold text-gray-900">Sadiq Nyanje</h4>
+          <p class="text-yellow-500 font-semibold mb-1">Treasurer</p>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">
+            Managing finances with transparency to support our mission. 
+          </p>
+                   <div class="flex flex-wrap gap-6 text-xl font-medium items-center justify-center">
+            <a href="" target="_blank"
+              class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a href="" target="_blank"
+              class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+
+            <a href="" target="_blank"
+              class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </div>
+
         </div>
-        <div class="card animate-zoom-in">
-          <img src="ruth_image.jpg" alt="Ruth Igunza">
-          <h4>Ruth Igunza</h4>
-          <p class="role">Media & Publications Officer</p>
-          <p>Leads creative content, branding, and communication outreach.</p>
-        </div>
-        <div class="card animate-zoom-in">
-          <img src="male-user.png" alt="AMMPES Official">
-          <h4>AMMPES Official</h4>
-          <p class="role">Event Co-ordinator</p>
-          <p>Drives vibrant student engagement through well-organized events and workshops.</p>
+
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition p-6 text-center">
+          <img src="ruth_image.jpg" alt="Ruth Igunza" 
+               class="w-72 aspect-square object-cover rounded-xl mb-4 border-4 border-yellow-400 ml-auto mr-auto">
+          <h4 class="text-lg font-bold text-gray-900">Ruth Igunza</h4>
+          <p class="text-yellow-500 font-semibold mb-1">Media | Publications</p>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">
+            Driving our media presence and storytelling to inspire and engage.
+          </p>
+                   <div class="flex flex-wrap gap-6 text-xl font-medium items-center justify-center">
+            <a href="" target="_blank"
+              class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a href="" target="_blank"
+              class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+
+            <a href="" target="_blank"
+              class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </div>
+
         </div>
       </div>
     </div>
-
-    <!-- Class Delegates -->
-    <div class="subsection animate-fade-up">
-      <h3 class="sub-title">Class Delegates</h3>
-      <div class="team-grid">
-        <div class="card animate-zoom-in">
-          <h4>John Mwangi</h4>
-          <p class="role">1st Year Representative</p>
-        </div>
-        <div class="card animate-zoom-in">
-          <h4>Kipkoech Victor</h4>
-          <p class="role">2nd Year Representative</p>
-        </div>
-        <div class="card animate-zoom-in">
-          <h4>Ian W.</h4>
-          <p class="role">3rd Year Representative</p>
-        </div>
-        <div class="card animate-zoom-in">
-          <h4>Class representative</h4>
-          <p class="role">4th Year Representative</p>
-        </div>
-        <div class="card animate-zoom-in">
-          <h4>Class representative</h4>
-          <p class="role">5th Year Representative</p>
-      </div>
-    </div>
-
-  </div>
 </section>
-
-<style>
-  .dark-bg {
-    background-color: #eee9e907;
-    color: #fff;
-    padding: 4rem 1.5rem;
-  }
-
-  .container {
-    max-width: 1200px;
-    margin: auto;
-  }
-
-  .section-title {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 3rem;
-    color: #050505;
-  }
-
-  .sub-title {
-    font-size: 2rem;
-    margin: 2rem 0 1.5rem;
-    border-left: 5px solid #5018fa;
-    padding-left: 1rem;
-    color: #6db8fd;
-  }
-
-  .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-  }
-
-  .card {
-    background: #1a1a1ad7;
-    border-radius: 15px;
-    padding: 1.5rem;
-    text-align: center;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-    transition: all 0.4s ease;
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  .card img {
-    width: 160px;
-    height: 160px;
-    border-radius: 16px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    object-fit: cover;
-    margin-bottom: 1rem;
-    border: 3px solid #ffd700;
-  }
-
-  .card h4 {
-    font-size: 1.3rem;
-    color: #fff;
-    margin-bottom: 0.3rem;
-  }
-
-  .card .role {
-    color: #ffd700;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-  }
-
-  .card p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    color: #ccc;
-  }
-
-  .card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
-  }
-
-  @media (max-width: 600px) {
-    .section-title {
-      font-size: 2rem;
-    }
-
-    .sub-title {
-      font-size: 1.5rem;
-    }
-
-    .card img {
-      width: 160px;
-      height: 160px;
-    }
-  }
-
-  /* Animations */
-  .animate-fade-up {
-    animation: fadeUp 1s ease forwards;
-  }
-
-  .animate-zoom-in {
-    animation: zoomIn 1s ease forwards;
-  }
-
-  @keyframes fadeUp {
-    0% {
-      opacity: 0;
-      transform: translateY(40px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes zoomIn {
-    0% {
-      opacity: 0;
-      transform: scale(0.85);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-</style>
-
-<script>
-  // Simple scroll reveal animation trigger
-  const reveal = (entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate-visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  };
-
-  const options = {
-    threshold: 0.1,
-  };
-
-  const observer = new IntersectionObserver(reveal, options);
-  document.querySelectorAll('.animate-fade-up, .animate-zoom-in').forEach(el => {
-    observer.observe(el);
-  });
-</script>
-
-<section id="projects" class="section bg-gray-50 py-12">
-  <div class="container max-w-4xl mx-auto px-4">
-    <h3 class="text-3xl font-bold text-center text-gray-900 mb-6">Our Projects</h3>
+<section id="projects" class="bg-gray-50 py-8 font-sans">
+  <div class="container max-w-5xl mx-auto px-6">
+    <!-- Heading -->
+    <h3 class="text-4xl md:text-5xl font-extrabold text-center text-gray-900 mb-10 tracking-tight">
+      Our Projects
+    </h3>
 
     <!-- Collapsible Note -->
-    <div class="mb-6">
-      <button id="note-toggle" class="w-full text-left bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 px-4 py-3 rounded-lg shadow-sm font-semibold flex justify-between items-center">
+    <div class="mb-10">
+      <button id="note-toggle"
+        class="w-full flex justify-between items-center bg-yellow-100 border-l-4 border-yellow-500 
+               text-yellow-900 px-5 py-4 rounded-xl shadow-sm font-semibold hover:bg-yellow-200 
+               transition duration-200 ease-in-out">
         <span>A Note to Our Members</span>
-        <svg id="note-icon" class="w-5 h-5 transition-transform duration-200 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        <svg id="note-icon" class="w-5 h-5 transition-transform duration-300" 
+             fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                d="M19 9l-7 7-7-7" />
         </svg>
       </button>
-      <div id="note-content" class="mt-3 px-4 py-3 text-base text-yellow-800 bg-yellow-50 rounded-lg hidden leading-relaxed">
-        <p>
-          At present, the <strong>Association of Mining and Mineral Processing Engineering Students (AMMPES)</strong> has not yet launched official projects. However, a number of impactful initiatives are already in mind just for you.
-        </p>
-        <p class="mt-2">
-          We sincerely believe that your participation and enthusiasm are the missing pieces that will bring these projects to life. So why not <strong>join us today</strong>? As a member, you will be at the forefront of transformative student-led activities in mining and mineral processing engineering.
-        </p>
-        <p class="mt-2">
-          Stay tuned right here and across all our media platforms, we'll notify you the moment projects are launched.
-        </p>
+
+      <div id="note-content"
+        class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out px-5 mt-2 
+               bg-yellow-60 rounded-xl shadow-inner text-yellow-900 leading-relaxed">
+        <div class="py-4">
+          <p>
+            At present, the <strong>Association of Mining and Mineral Processing Engineering Students (AMMPES)</strong> 
+            has not yet launched official projects. However, we are actively working on developing a range of 
+            exciting initiatives that will soon be available for our members to participate in.
+          </p>
+          <p class="mt-3">
+            We truly believe that <strong>your participation and enthusiasm</strong> are the missing pieces that will bring these projects to life. 
+            Join us today and be part of transformative student-led activities shaping the future of mining and mineral processing engineering.
+          </p>
+          <p class="mt-3">
+            Stay tuned here and across all our media platforms, we’ll notify you the moment projects go live.
+          </p>
+        </div>
       </div>
     </div>
 
-    <ul class="list-disc list-inside text-gray-700">
-     
+    <!-- Placeholder for Projects -->
+    <ul class="list-disc list-inside text-gray-700 text-lg space-y-2">
+      <li class="italic text-gray-500">No official projects available yet.</li>
     </ul>
+
+    <!-- Join Section -->
+    <div id="join" class="mt-16 bg-gradient-to-r from-yellow-700 to-yellow-600 rounded-3xl shadow-lg p-10 text-center text-white">
+      <h3 class="text-3xl md:text-4xl font-bold mb-4">Join Us</h3>
+      <p class="max-w-2xl mx-auto text-base md:text-lg leading-relaxed mb-6 font-weight-medium">
+        Be part of a growing professional network. Our association provides resources, mentorship, and a voice in shaping the future of mining and mineral processing engineering.
+      </p>
+      <a href="join_ammpes.html" 
+         class="inline-block bg-white text-yellow-600 font-semibold px-6 py-3 rounded-full 
+                shadow-md hover:bg-gray-100 hover:scale-105 transition duration-300 ease-in-out">
+        Become a Member
+      </a>
+    </div>
   </div>
 </section>
 
+<!-- Collapsible Script -->
 <script>
-  const toggleBtn = document.getElementById('note-toggle');
-  const noteContent = document.getElementById('note-content');
-  const icon = document.getElementById('note-icon');
+  const toggle = document.getElementById("note-toggle");
+  const content = document.getElementById("note-content");
+  const icon = document.getElementById("note-icon");
 
-  toggleBtn.addEventListener('click', () => {
-    noteContent.classList.toggle('hidden');
-    icon.classList.toggle('rotate-180');
+  toggle.addEventListener("click", () => {
+    content.classList.toggle("max-h-96");
+    icon.classList.toggle("rotate-180");
   });
 </script>
 
-
-  <section id="join" class="section highlight">
-    <div class="container">
-      <h3>Join Us</h3>
-      <p>Be part of a growing professional network. Whether you're a student or a seasoned engineer, our association provides resources, mentorship, and a voice in shaping the future of mining.</p>
-      <a href="join_ammpes.html" class="btn">Become a Member or Benefits of joining?</a>
-    </div>
-  </section>
 
   <section id="contact" class="section dark-bg">
     <div class="container contact-flex">
@@ -773,9 +803,10 @@ body {
     </div>
   </section>
 
+  
   <section class="section highlight" style="background-color: #1f1f1f; color: white; text-align: center; padding: 2rem 0;">
     <div class="container">
-      <h3>Follow Us</h3>
+      <h3>Stay updated!</h3>
       <p>Stay updated with our latest news and events by following us on our social media platforms.</p>
       <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1rem;">
         <a href="https://www.facebook.com/ammpes.jkuat?mibextid=ZbWKwL" target="_blank" class="btn" style="background: none; color: white; font-size: 1.5rem;">
@@ -816,9 +847,9 @@ body {
 </style>
   <footer class="footer">
     <p class="mb-1">
-      Designed by <span class="font-semibold text-yellow-400">Brian Odhiambo</span> &bull; 
-      <span class="text-gray-400">Powered by</span> 
-      <a href="https://iskify360.netlify.app" target="_blank" class="text-yellow-400 underline hover:underline font-semibold">Iskify360</a>
+      Designed by <span class="font-semibold text-yellow-400 underline"><a href="https://engineerodhiambo.netlify.app" target=" _blank" >HOBO</a></span> &bull; 
+      <span class="text-gray-400"></span> 
+      <a href="https://iskify360.netlify.app" target="_blank" class="text-yellow-400 underline hover:underline font-semibold"></a>
     </p>
     <p class="text-gray-500">© <span id="year"></span> AMMPES JKUAT. All rights reserved.</p>
   </footer>
@@ -828,7 +859,6 @@ body {
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 
-<script async src="https://www.tiktok.com/embed.js"></script>
 <script>
   // Smooth scrolling for navigation links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -947,4 +977,3 @@ body {
 }
 </style>
 </html>
-
