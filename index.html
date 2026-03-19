@@ -47,18 +47,59 @@
 <body class="font-sans text-gray-800 bg-brand-light antialiased selection:bg-brand-gold selection:text-white">
 
   <header class="fixed top-0 w-full z-50 bg-white border-b border-gray-200 shadow-sm transition-all duration-300">
-    <div class="hidden md:block bg-brand-navy text-white text-xs py-2">
-      <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <div class="flex gap-6">
-          <span><i class="fa-solid fa-envelope text-brand-gold mr-2"></i>ammpesjkuat@gmail.com</span>
-          <span><i class="fa-solid fa-phone text-brand-gold mr-2"></i>+254-702-4957-76</span>
+    <div class="hidden md:flex bg-brand-navy text-white text-xs py-3 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 w-full">
+      <div class="flex animate-scroll whitespace-nowrap gap-12">
+        <!-- Contact Info -->
+        <div class="flex gap-6 flex-shrink-0">
+        <span><i class="fa-solid fa-envelope text-brand-gold mr-2"></i>ammpesjkuat@gmail.com</span>
+        <span><i class="fa-solid fa-phone text-brand-gold mr-2"></i>+254-702-4957-76</span>
         </div>
-        <div class="flex gap-4">
-          <a href="#" class="hover:text-brand-gold transition"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="#" class="hover:text-brand-gold transition"><i class="fa-brands fa-x-twitter"></i></a>
+        
+        <!-- Active Communications -->
+        <div class="flex gap-2 flex-shrink-0 items-center border-l border-white/20 pl-6">
+        <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+        <span class="font-semibold text-brand-gold">LIVE:</span>
+        <span>Field Trip to Space & Style Limited - Mar 25, 2026</span>
+        </div>
+        
+        <!-- Upcoming Events -->
+        <div class="flex gap-2 flex-shrink-0 items-center border-l border-white/20 pl-6">
+        <i class="fa-solid fa-calendar text-brand-gold mr-1"></i>
+        <span class="font-semibold text-brand-gold">CANCELLED:</span>
+        <span>Geotechnical Data Modeling Seminar - Jan 15</span>
+        </div>
+        
+        <!-- Social Links -->
+        <div class="flex gap-4 flex-shrink-0 items-center border-l border-white/20 pl-6">
+        <a href="#" class="hover:text-brand-gold transition"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" class="hover:text-brand-gold transition"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+        
+        <!-- Duplicate for seamless loop -->
+        <div class="flex gap-6 flex-shrink-0">
+        <span><i class="fa-solid fa-envelope text-brand-gold mr-2"></i>ammpesjkuat@gmail.com</span>
+        <span><i class="fa-solid fa-phone text-brand-gold mr-2"></i>+254-702-4957-76</span>
+        </div>
+        
+        <div class="flex gap-2 flex-shrink-0 items-center border-l border-white/20 pl-6">
+        <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+        <span class="font-semibold text-brand-gold">LIVE:</span>
+        <span>Field Trip to Space & Style Limited - Mar 25, 2026</span>
         </div>
       </div>
+      </div>
     </div>
+
+    <style>
+      @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+      }
+      .animate-scroll {
+      animation: scroll 15s linear infinite;
+      }
+    </style>
 
     <div class="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center h-20">
       <a href="#" class="font-display font-bold text-2xl tracking-tight text-brand-navy flex items-center gap-3">
@@ -282,7 +323,7 @@
     </div>
   </section>
 
-<section id="membership" class="py-32 bg-white relative -mt-10 z-20 rounded-t-[3rem] shadow-[0_-20px_50px_rgba(0,0,0,0.02)] border-b border-gray-100 overflow-hidden">
+<section id="membership" class="py-8 bg-white relative -mt-10 z-20 rounded-t-[3rem] shadow-[0_-20px_50px_rgba(0,0,0,0.02)] border-b border-gray-100 overflow-hidden">
     
     <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-light rounded-full mix-blend-multiply filter blur-3xl opacity-50 transform translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
 
