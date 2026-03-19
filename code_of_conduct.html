@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Code of Conduct | AMMPES</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              navy: '#0B1B3D',     
+              blue: '#1A365D',     
+              gold: '#D4AF37',     
+              goldhover: '#B5952F',
+              light: '#F8F9FA',    
+            }
+          },
+          boxShadow: {
+            'corporate': '0 10px 40px -10px rgba(11,27,61,0.08)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Clean scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #F8F9FA; }
+    ::-webkit-scrollbar-thumb { background: #1A365D; border-radius: 4px; }
+  </style>
+</head>
+<body class="font-sans text-gray-800 bg-brand-light antialiased selection:bg-brand-gold selection:text-white flex flex-col min-h-screen">
+
+  <header class="w-full z-50 bg-white border-b border-gray-200 shadow-sm relative">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center h-20">
+      <a href="index.html" class="font-display font-bold text-2xl tracking-tight text-brand-navy flex items-center gap-3">
+        <img src="ammpes.png" alt="AMMPES Logo" class="w-24 h-24 object-contain">Codes
+      </a>
+      
+      <a href="index.html" class="hidden md:flex text-sm font-semibold text-gray-500 hover:text-brand-navy transition items-center gap-2">
+        <i class="fa-solid fa-arrow-left"></i> Return to Home
+      </a>
+
+      <button id="mobile-menu-btn" class="md:hidden text-2xl text-brand-navy focus:outline-none">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <div id="mobile-menu" class="fixed inset-0 bg-brand-navy/98 backdrop-blur-xl z-[100] transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col items-center justify-center space-y-8">
+    <button id="close-menu-btn" class="absolute top-8 right-8 text-3xl text-gray-400 hover:text-brand-gold transition-colors focus:outline-none">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-gold to-transparent"></div>
+    <a href="index.html" class="mobile-link font-display text-2xl font-bold text-white hover:text-brand-gold transition-colors tracking-wide">Home</a>
+    <a href="join_ammpes.html" class="mobile-link font-display text-2xl font-bold text-white hover:text-brand-gold transition-colors tracking-wide">Membership</a>
+    <a href="contact.html" class="mobile-link font-display text-2xl font-bold text-white hover:text-brand-gold transition-colors tracking-wide">Contact</a>
+  </div>
+
+  <section class="bg-brand-navy pt-20 pb-32 relative overflow-hidden">
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:30px_30px] opacity-40"></div>
+    
+    <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+      <h1 class="font-display text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight max-w-3xl">
+        Code of Ethics & <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-yellow-300">Professional Conduct</span>
+      </h1>
+      <p class="text-gray-400 text-lg max-w-2xl font-light leading-relaxed">
+        The foundational principles guiding the behavior, safety, and absolute integrity of all AMMPES members, leadership, and affiliates.
+      </p>
+    </div>
+  </section>
+
+  <main class="flex-grow max-w-7xl mx-auto px-6 md:px-12 w-full -mt-16 relative z-20 mb-24">
+    <div class="grid lg:grid-cols-12 gap-10 items-start">
+      
+      <div class="hidden lg:block lg:col-span-4 sticky top-28">
+        <div class="bg-white rounded-2xl p-8 shadow-corporate border border-gray-100 relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-1 h-full bg-gray-100"></div>
+          
+          <h3 class="font-display text-sm font-bold text-brand-navy uppercase tracking-widest mb-6">Document Index</h3>
+          
+          <nav class="space-y-1">
+            <a href="#section-1" class="block py-3 pl-4 border-l-2 border-brand-gold text-brand-navy font-semibold text-sm transition-colors relative">
+              01. Academic Integrity & Honesty
+            </a>
+            <a href="#section-2" class="block py-3 pl-4 border-l-2 border-transparent text-gray-500 hover:text-brand-navy hover:border-gray-300 font-semibold text-sm transition-colors relative">
+              02. Health, Safety & Environment (HSE)
+            </a>
+            <a href="#section-3" class="block py-3 pl-4 border-l-2 border-transparent text-gray-500 hover:text-brand-navy hover:border-gray-300 font-semibold text-sm transition-colors relative">
+              03. Respect & Inclusivity
+            </a>
+            <a href="#section-4" class="block py-3 pl-4 border-l-2 border-transparent text-gray-500 hover:text-brand-navy hover:border-gray-300 font-semibold text-sm transition-colors relative">
+              04. Industrial Engagement Protocol
+            </a>
+            <a href="#section-5" class="block py-3 pl-4 border-l-2 border-transparent text-gray-500 hover:text-brand-navy hover:border-gray-300 font-semibold text-sm transition-colors relative">
+              05. Disciplinary & Grievance Procedures
+            </a>
+          </nav>
+        </div>
+
+        <div class="mt-6 bg-brand-light border border-gray-200 rounded-xl p-6">
+          <p class="text-xs text-gray-500 uppercase tracking-widest font-bold mb-2">Last Updated</p>
+          <p class="text-brand-navy font-mono text-sm">March 2026</p>
+          <div class="h-px bg-gray-200 w-full my-4"></div>
+          <p class="text-xs text-gray-500 uppercase tracking-widest font-bold mb-2">Authorized By</p>
+          <p class="text-brand-navy font-semibold text-sm">AMMPES Executive Committee</p>
+        </div>
+      </div>
+
+      <div class="lg:col-span-8 space-y-12">
+        
+        <div class="bg-white rounded-[2rem] p-8 md:p-12 shadow-corporate border border-gray-100">
+          <p class="text-gray-600 leading-relaxed mb-8">
+            As a premier association for mining engineering students at JKUAT, AMMPES demands the highest standards of professional and ethical conduct. By holding membership or participating in any AMMPES-sanctioned event, you explicitly agree to adhere to the directives outlined in this document.
+          </p>
+
+          <div id="section-1" class="relative pt-8 mt-8 border-t border-gray-100 scroll-mt-32">
+            <div class="absolute right-0 top-12 text-8xl font-display font-bold text-gray-50 select-none pointer-events-none -z-10">01</div>
+            <h2 class="font-display text-2xl font-bold text-brand-navy mb-6 flex items-center gap-3">
+              <span class="hidden w-8 h-8 rounded bg-brand-navy text-brand-gold flex items-center justify-center text-sm"><i class="fa-solid fa-fingerprint"></i></span>
+              Academic Integrity & Absolute Honesty
+            </h2>
+            
+            <div class="bg-brand-navy/5 border-l-4 border-brand-navy rounded-r-xl p-6 mb-8">
+              <h4 class="font-bold text-brand-navy mb-2 flex items-center gap-2">
+                The AMMPES Honesty Campaign
+              </h4>
+              <p class="text-sm text-gray-700 leading-relaxed">
+                AMMPES actively campaigns for absolute honesty and transparency across all frontiers. An engineer's most valuable asset is their credibility. We champion a culture where integrity in the classroom translates directly to safety and reliability in the mining field.
+              </p>
+            </div>
+
+            <ul class="space-y-5 text-gray-600 leading-relaxed">
+              <li class="flex items-start gap-3 border-b border-gray-50 pb-4">
+                <i class="fa-solid fa-check text-brand-gold mt-1.5 text-sm shrink-0"></i>
+                <div>
+                  <strong class="text-brand-navy block mb-1">Examinations & Assessments:</strong> 
+                  AMMPES maintains a strict zero-tolerance policy for academic malpractice. Members must not engage in cheating, unauthorized collusion, or the use of prohibited materials during university examinations or continuous assessment tests (CATs).
+                </div>
+              </li>
+              <li class="flex items-start gap-3 border-b border-gray-50 pb-4">
+                <i class="fa-solid fa-check text-brand-gold mt-1.5 text-sm shrink-0"></i>
+                <div>
+                  <strong class="text-brand-navy block mb-1">Classroom & Departmental Transparency:</strong> 
+                  Members are expected to actively and truthfully participate in lectures, laboratory sessions, and fieldwork. The falsification of engineering data, assay results, or attendance records is a severe breach of professional engineering ethics.
+                </div>
+              </li>
+              <li class="flex items-start gap-3 border-b border-gray-50 pb-4">
+                <i class="fa-solid fa-check text-brand-gold mt-1.5 text-sm shrink-0"></i>
+                <div>
+                  <strong class="text-brand-navy block mb-1">University & Leadership Activities:</strong> 
+                  When representing AMMPES in student governance, university-wide forums, or financial dealings, members and executives must operate with complete transparency, ensuring all actions can withstand public and institutional scrutiny.
+                </div>
+              </li>
+              <li class="flex items-start gap-3 pb-2">
+                <i class="fa-solid fa-check text-brand-gold mt-1.5 text-sm shrink-0"></i>
+                <div>
+                  <strong class="text-brand-navy block mb-1">Peer Accountability:</strong> 
+                  True integrity requires collective effort. Members are encouraged to hold their peers accountable to these standards, fostering an environment where honesty is the default operational protocol.
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div id="section-2" class="relative pt-12 mt-12 border-t border-gray-100 scroll-mt-32">
+            <div class="absolute right-0 top-16 text-8xl font-display font-bold text-gray-50 select-none pointer-events-none -z-10">02</div>
+            <h2 class="font-display text-2xl font-bold text-brand-navy mb-4 flex items-center gap-3">
+              Health, Safety & Environment (HSE)
+            </h2>
+            <p class="text-gray-600 mb-4">Given the high-risk nature of the mining and mineral processing industry, safety is not optional; it is a primary directive.</p>
+            <ul class="space-y-4 text-gray-600 leading-relaxed">
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-brand-gold mt-1.5 text-sm shrink-0"></i>
+                <span><strong>PPE Compliance:</strong> Strict adherence to Personal Protective Equipment (PPE) requirements during all industrial visits, workshops, and laboratory sessions is mandatory.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-brand-gold mt-1.5 text-sm shrink-0"></i>
+                <span><strong>Hazard Reporting:</strong> Members must immediately report any unsafe practices or hazardous conditions observed during association activities to the organizing committee.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-brand-gold mt-1.5 text-sm shrink-0"></i>
+                <span><strong>Environmental Stewardship:</strong> Members shall advocate for and practice sustainable engineering solutions that minimize negative environmental impacts.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div id="section-3" class="relative pt-12 mt-12 border-t border-gray-100 scroll-mt-32">
+            <div class="absolute right-0 top-16 text-8xl font-display font-bold text-gray-50 select-none pointer-events-none -z-10">03</div>
+            <h2 class="font-display text-2xl font-bold text-brand-navy mb-4 flex items-center gap-3">
+              Respect & Inclusivity
+            </h2>
+            <ul class="space-y-4 text-gray-600 leading-relaxed">
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-brand-gold mt-1.5 text-sm shrink-0"></i>
+                <span><strong>Zero Tolerance for Discrimination:</strong> AMMPES strictly prohibits harassment, bullying, or discrimination based on gender, race, religion, ethnicity, or academic standing.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-brand-gold mt-1.5 text-sm shrink-0"></i>
+                <span><strong>Constructive Dialogue:</strong> Disagreements during technical discussions or committee meetings must be handled with professional courtesy and mutual respect.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div id="section-4" class="relative pt-12 mt-12 border-t border-gray-100 scroll-mt-32">
+            <div class="absolute right-0 top-16 text-8xl font-display font-bold text-gray-50 select-none pointer-events-none -z-10">04</div>
+            <h2 class="font-display text-2xl font-bold text-brand-navy mb-4 flex items-center gap-3">
+              Industrial Engagement Protocol
+            </h2>
+            <p class="text-gray-600 mb-4">When interacting with industry partners, alumni, or corporate sponsors, members act as ambassadors of JKUAT.</p>
+            <ul class="space-y-4 text-gray-600 leading-relaxed">
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-brand-gold mt-1.5 text-sm shrink-0"></i>
+                <span><strong>Punctuality & Reliability:</strong> Members must honor RSVPs for industrial trips and arrive strictly on time. Failure to attend without prior notice damages the association's reputation.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-brand-gold mt-1.5 text-sm shrink-0"></i>
+                <span><strong>Corporate Communication:</strong> All formal communications with external partners must be routed through or approved by the Executive Committee.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div id="section-5" class="relative pt-12 mt-12 border-t border-gray-100 scroll-mt-32">
+            <div class="absolute right-0 top-16 text-8xl font-display font-bold text-gray-50 select-none pointer-events-none -z-10">05</div>
+            <h2 class="font-display text-2xl font-bold text-brand-navy mb-4 flex items-center gap-3">
+              Disciplinary & Grievance Procedures
+            </h2>
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-6">
+              <h4 class="font-bold text-brand-navy mb-2">Reporting Violations</h4>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Any member who witnesses a breach of this Code of Conduct is encouraged to report the incident to the Executive Committee. Reports can be submitted confidentially via our <a href="contact.html" class="text-brand-gold hover:underline font-semibold">AMMPES Communications Portal</a>.
+              </p>
+            </div>
+            <p class="text-gray-600 leading-relaxed">
+              Violations of this code will be reviewed by the Executive Committee and the Association Patron. Consequences may include formal warnings, suspension of membership privileges, revoking of event access, or, in severe cases involving academic/safety breaches, referral to the JKUAT University Disciplinary Committee.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="bg-brand-navy py-6 text-center mt-auto border-t-2 border-brand-gold">
+    <div class="max-w-7xl mx-auto px-6 text-xs text-gray-400 flex flex-col sm:flex-row justify-between items-center gap-2">
+      <p>© <span id="year"></span> AMMPES JKUAT. All rights reserved.</p>
+      <p>System Architecture by <a href="https://engineerodhiambo.netlify.app" target="_blank" class="text-brand-gold hover:underline font-semibold">HOBO</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Set Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile Menu Logic
+    document.addEventListener("DOMContentLoaded", () => {
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const closeMenuBtn = document.getElementById('close-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+
+      const toggleMenu = () => {
+        const isClosed = mobileMenu.classList.contains('translate-x-full');
+        if (isClosed) {
+          mobileMenu.classList.remove('translate-x-full');
+          document.body.style.overflow = 'hidden';
+        } else {
+          mobileMenu.classList.add('translate-x-full');
+          document.body.style.overflow = '';
+        }
+      };
+
+      mobileMenuBtn.addEventListener('click', toggleMenu);
+      closeMenuBtn.addEventListener('click', toggleMenu);
+      
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('translate-x-full');
+          document.body.style.overflow = '';
+        });
+      });
+
+      // Simple active state logic for the sticky sidebar (Desktop)
+      const sections = document.querySelectorAll("div[id^='section-']");
+      const navLinks = document.querySelectorAll("nav a");
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          // Offset for the fixed header
+          if (scrollY >= sectionTop - 150) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("border-brand-gold", "text-brand-navy");
+          link.classList.add("border-transparent", "text-gray-500");
+          if (link.getAttribute("href").includes(current)) {
+            link.classList.remove("border-transparent", "text-gray-500");
+            link.classList.add("border-brand-gold", "text-brand-navy");
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
